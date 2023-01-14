@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import {
   BsGithub,
@@ -13,10 +13,27 @@ import { FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [position, setPosition] = useState<number>(0);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY; // => scroll position
+    setPosition(scrollPosition);
+  };
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="flex justify-center w-full bg-transparent absolute top-0">
-      <div className="flex justify-between w-full max-w-5xl mx-4 mt-3">
+    <div
+      className={`flex justify-center w-full fixed z-20 top-0 transition duration-300 ease-in-out ${
+        position > 50 ? 'bg-white' : 'bg-transparent'
+      }`}
+    >
+      <div className="flex justify-between w-full max-w-5xl mx-4 my-3">
         <div
           className={`${
             isActive ? 'absolute' : 'hidden'
@@ -109,7 +126,7 @@ const Navbar = () => {
             <BsYoutube />
           </li>
         </ul>
-        <div className="flex items-center text-3xl">
+        <div className="flex items-center text-3xl relative z-10">
           <FiMenu
             onClick={() => {
               setIsActive((isActive) => !isActive);
