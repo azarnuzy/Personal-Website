@@ -149,10 +149,15 @@ const Portofolio = () => {
               className={`mx-5 flex ${
                 i % 2 == 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'
               } flex-col`}
+              key={i}
             >
-              <div className="w-full  border-2 border-solid border-dark-gray shadow-sm hover:border-b-4 hover:border-r-4 transition ease-in-out duration-300 h-[220px] mb-5 overflow-hidden">
+              <a
+                href={item.url}
+                target="_blank"
+                className="w-full  border-2 border-solid border-dark-gray shadow-sm hover:border-b-4 hover:border-r-4 transition ease-in-out duration-300 h-[220px] mb-5 overflow-hidden"
+              >
                 {imageProject(item.image)}
-              </div>
+              </a>
               <div className="">
                 <span
                   className={`${

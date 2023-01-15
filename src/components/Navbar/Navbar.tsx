@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div
       className={`flex justify-center w-full fixed z-20 top-0 transition duration-300 ease-in-out ${
-        position > 50 ? 'bg-white' : 'bg-transparent'
+        position > 0 ? 'bg-white' : 'bg-transparent'
       }`}
     >
       <div className="flex justify-between w-full max-w-5xl mx-4 my-3">
