@@ -10,6 +10,7 @@ import {
 } from 'react-icons/bs';
 import { BiTerminal } from 'react-icons/bi';
 import { FiMenu } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -42,12 +43,12 @@ const Navbar = () => {
             setIsActive(() => false);
           }}
         ></div>
-        <div className="flex items-center gap-1">
+        <Link to={'/'} className="flex items-center gap-1">
           <BiTerminal className="text-orange-red text-4xl" />
           <span className="tracking-wider font-bold text-4xl text-dark-gray">
             AZAR
           </span>
-        </div>
+        </Link>
         <div
           className={`fixed flex flex-col bg-dark-gray text-white max-w-[300px] transform  gap-8 h-screen w-full top-0 z-50 px-8 pt-3 left-0 duration-1000 ease-in-out ${
             isActive ? 'translate-x-0' : '-translate-x-full'
@@ -71,11 +72,10 @@ const Navbar = () => {
           </div>
           <div className="h-[68%]">
             <ul className="list-none flex flex-col gap-2 text-xl">
-              <li>Home</li>
-              <li>About</li>
-              <li>Project</li>
-              <li>Blog</li>
-              <li>Contact</li>
+              <Link to={'/'}>Home</Link>
+              <Link to={'/resume'}>Resume</Link>
+              <Link to={'/portofolio'}>Portofolio</Link>
+              <Link to={'/contact'}>Contact</Link>
             </ul>
           </div>
           <div className="flex flex-col gap-3">

@@ -1,0 +1,65 @@
+[
+  {
+    "title": "E-Flight Booking Ticket (FlyKet)",
+    "tags": "Web App",
+    "description": "A website to book flights was built using react for frontend and java for backend. My role for this project as a frontend lead",
+    "image": "flyket",
+    "url": "https://flyket.netlify.app/"
+  },
+  {
+    "title": "E-Flight Booking Ticket (FlyKet)",
+    "tags": "Mobile App",
+    "description": "A mobile app to book flights was built using flutter for frontend and nodejs for backend. My role for this project as a frontend",
+    "image": "flyket2",
+    "url": "https://docs.google.com/presentation/d/1epqEZNsUGdvPAeDnxHFrw-aIspXW95YBZFhiPsAxBfE/edit#slide=id.g1c4321f1c38_2_314"
+  },
+  {
+    "title": "E-Library Eprints UPI",
+    "tags": "Web App",
+    "description": "A website to store books, journals, scientific papers, etc. for purpose of managing files in the UPI library was built using html, css, javacsript for frontend and perl for backend. My role for this project as a frontend developer and my job is to modify the E-Library interfaces using html, css, and javascript.",
+    "image": "eprints",
+    "url": "https://www.figma.com/file/2yYHlEQ7ZYAibxbealM658/Perpus-UPI?node-id=1%3A2&t=d2QV8rUBpMXIQ2EI-1"
+  },
+  {
+    "title": "Sistem Informasi Peminjaman Ruangan Kampus (SiManuk)",
+    "tags": "Web App",
+    "description": "A website to provide availability room in campus so people inside campus can rent the room easily. This website was built using Laravel and bootstrap.",
+    "image": "simanuk",
+    "url": "https://github.com/azarnuzy/Rent-Room-App"
+  },
+  {
+    "title": "Movie Catalog",
+    "tags": "Web App",
+    "description": "A website to provide up to date movie catalog. The source movie data are from https://developers.themoviedb.org/3 and this web app was built by ReactJs and Redux",
+    "image": "moviecatalog",
+    "url": "https://new-react-movie-db-app-with-redux.vercel.app/"
+  },
+  {
+    "title": "Recipe Catalog",
+    "tags": "Web App",
+    "description": "A website to provide recipe catalog. The source recipe data are from https://www.themealdb.com/api.php and this web app was built by ReactJs",
+    "image": "recipecatalog",
+    "url": "https://meal-db-reactjs.netlify.app/"
+  },
+  {
+    "title": "Resto Catalog",
+    "tags": "Web App",
+    "description": "A website to provide restaurant catalog. This project is built to completed expert front end course in dicoding and the tech stack is using html, css, and vanilla javascript",
+    "image": "resto",
+    "url": "https://azarnuzy.github.io/Restaurant-Apps/"
+  },
+  {
+    "title": "Online Course Landing Page (CourseMate)",
+    "tags": "Web App",
+    "description": "Landing page website to offer online course to student who want to test to join the high school",
+    "image": "coursemate",
+    "url": "https://azarnuzy.github.io/courseMateBundle/"
+  },
+  {
+    "title": "Bookshelf Web App",
+    "tags": "Web App",
+    "description": "This web is to make list of book that we want to read and finish reading",
+    "image": "bookshelf",
+    "url": "https://azarnuzy.github.io/azarn.github.io/src/PemulaDicoding/index.html"
+  }
+]

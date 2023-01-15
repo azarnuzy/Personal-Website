@@ -10,11 +10,11 @@ import {
   FaUserGraduate,
 } from 'react-icons/fa';
 import { TbBook, TbPodium } from 'react-icons/tb';
-const Resume = () => {
+const ResumeContent = () => {
   return (
-    <div className="mt-10 w-full">
-      <h2 className="mt-8 mb-2 mx-5 font-bold text-3xl text-dark-gray">
-        Resume
+    <div className="mt-20 mb-10 w-full">
+      <h2 className="text-center tracking-wider mt-8 mb-2 mx-5 font-bold text-3xl text-dark-gray">
+        RESUME
       </h2>
       <div className="mb-3 mx-5 ">
         <div className="mb-3">
@@ -313,4 +313,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default ResumeContent;
