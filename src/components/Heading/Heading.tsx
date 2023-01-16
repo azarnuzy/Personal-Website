@@ -1,3 +1,4 @@
+import FileSaver from 'file-saver';
 import {
   BsEnvelopeFill,
   BsGithub,
@@ -9,6 +10,14 @@ import {
 import handShake from '../../assets/Hand.gif';
 import hero from '../../assets/hero2.png';
 const Heading = () => {
+  function saveAs() {
+    console.log('download');
+
+    const a = document.createElement('a');
+    a.href = '/assets/CV_Muhammad_Azar_Nuzy.pdf';
+    a.download = 'CV_Muhammad_Azar_Nuzy.pdf';
+    a.click();
+  }
   return (
     <div className="hero-background relative overflow-hidden ">
       <div className="flex flex-col md:flex-row md:justify-start max-w-5xl w-full md:mx-auto items-center mt-28">
@@ -27,7 +36,17 @@ const Heading = () => {
             <button
               className="absolute z-10 w-36 h-10 flex justify-center py-2 bg-orange-red text-white rounded-sm tracking-wider shadow-md"
               onClick={() => {
-                // let file = new File()
+                fetch('CV_Muhammad_Azar_Nuzy.pdf').then((response) => {
+                  response.blob().then((blob) => {
+                    // Creating new object of PDF file
+                    const fileURL = window.URL.createObjectURL(blob);
+                    // Setting various property values
+                    let alink = document.createElement('a');
+                    alink.href = fileURL;
+                    alink.download = 'CV_Muhammad_Azar_Nuzy.pdf';
+                    alink.click();
+                  });
+                });
               }}
             >
               Download CV
