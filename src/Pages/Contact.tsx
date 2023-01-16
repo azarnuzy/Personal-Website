@@ -1,8 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [userName, setUsername] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [subject, setSubject] = useState<string>();
+  const [message, setMessage] = useState<string>();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -14,23 +19,30 @@ const Contact = () => {
     const publicKey: string | undefined = import.meta.env
       .VITE_PUBLIC_KEY_EMAILJS as string;
 
-    console.log(import.meta.env.VITE_PUBLIC_KEY_EMAILJS);
-
-    emailjs
-      .sendForm(
-        'service_6l04dwm',
-        'template_x3658zc',
-        form.current as any,
-        'e7m63w8eGQgtiE-wF'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(serviceId, template, form.current as any, publicKey).then(
+      (result) => {
+        console.log(result.text);
+        Swal.fire({
+          title: 'Message has been sent successfully',
+          showConfirmButton: false,
+          icon: 'success',
+          timer: 1500,
+          timerProgressBar: true,
+          customClass: {
+            container: 'container-swal',
+            title: 'text-swal',
+            icon: 'text-swal',
+          },
+        });
+        setEmail('');
+        setMessage('');
+        setSubject('');
+        setUsername('');
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
   return (
     <div className="mt-16">
@@ -45,6 +57,8 @@ const Contact = () => {
                 Username
               </label>
               <input
+                value={userName}
+                onChange={(e) => setUsername(e.target.value)}
                 type="text"
                 id="username"
                 name="user_name"
@@ -58,6 +72,8 @@ const Contact = () => {
                 Email
               </label>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 id="email"
                 name="user_email"
@@ -71,6 +87,8 @@ const Contact = () => {
                 Subject
               </label>
               <input
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 type="text"
                 id="subject"
                 name="subject"
@@ -84,6 +102,8 @@ const Contact = () => {
                 Message
               </label>
               <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 name="message"
                 className="w-full p-2 my-1 placeholder:text-dark-gray-2 border-1 border border-solid border-dark-gray focus:border-2"
                 placeholder="Message *"
