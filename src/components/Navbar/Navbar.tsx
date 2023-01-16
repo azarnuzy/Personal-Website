@@ -102,31 +102,22 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <ul className="md:flex gap-3 list-none hidden">
-          <li>Home</li>
-          <li>About</li>
-          <li>Project</li>
-          <li>Blog</li>
-          <li>Contact</li>
+        <ul className="md:flex gap-5 md:relative md:items-center list-none hidden tracking-widest text-dark-gray font-semibold mt-2">
+          <Link to={'/'}>HOME</Link>
+          <Link to={'/resume'}>RESUME</Link>
+          <Link to={'/portofolio'}>PROJECT</Link>
+          <Link to={'/contact'}>CONTACT</Link>
         </ul>
-        <ul className="hidden md:flex gap-1 list-none">
-          <li>
-            <BsLinkedin />
-          </li>
-          <li>
-            <BsGithub />
-          </li>
-          <li>
-            <BsTwitter />
-          </li>
-          <li>
-            <BsInstagram />
-          </li>
-          <li>
-            <BsYoutube />
-          </li>
-        </ul>
-        <div className="flex items-center text-3xl relative z-10">
+        <Link
+          to={'/contact'}
+          className="hidden md:relative md:left-0 md:w-40 md:flex justify-center"
+        >
+          <button className="absolute z-10 w-40 h-10 flex justify-center py-2 bg-orange-red text-white rounded-sm tracking-wider shadow-md">
+            CONTACT NOW
+          </button>
+          <button className="absolute z-0 top-2 translate-x-1 w-40 h-10 flex justify-center py-2 bg-dark-gray text-white rounded-sm tracking-wider shadow-md"></button>
+        </Link>
+        <div className="flex items-center text-3xl relative z-10 md:hidden">
           <FiMenu
             onClick={() => {
               setIsActive((isActive) => !isActive);
