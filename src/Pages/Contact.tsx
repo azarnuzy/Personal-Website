@@ -8,7 +8,7 @@ const Contact = () => {
   const [email, setEmail] = useState<string>();
   const [subject, setSubject] = useState<string>();
   const [message, setMessage] = useState<string>();
-
+  window.scrollTo(0, 0);
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -46,8 +46,8 @@ const Contact = () => {
   };
   return (
     <div className="mt-16">
-      <div className="relative z-0 bg-dark-gray w-full h-[100%] p-5">
-        <div className="bg-white  p-4">
+      <div className="relative z-0 bg-dark-gray w-full flex justify-center h-[100%] p-5 md:h-[85vh]">
+        <div className="bg-white max-w-3xl flex-grow p-4">
           <h2 className="text-center tracking-wide  mb-2 mx-5 font-medium text-4xl text-dark-gray">
             Contact
           </h2>

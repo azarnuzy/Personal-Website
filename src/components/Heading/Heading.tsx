@@ -21,7 +21,7 @@ const Heading = () => {
   return (
     <div className="hero-background relative overflow-hidden ">
       <div className="flex flex-col md:flex-row md:justify-start max-w-5xl w-full md:mx-auto items-center mt-28">
-        <div className="flex flex-col md:items-start md:-mt-10 items-center w-full">
+        <div className="flex flex-col md:items-start md:-mt-10 items-center w-full md:mx-5">
           <div className="tracking-wider text-dark-gray font-semibold text-xl md:text-2xl flex">
             Hi <img src={handShake} alt="Hand.gif" className="w-6 h-6" />, My
             Name is Azar

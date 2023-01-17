@@ -12,7 +12,7 @@ import {
 import { TbBook, TbPodium } from 'react-icons/tb';
 const ResumeContent = () => {
   return (
-    <div className="mt-20 mb-10 w-full">
+    <div className="mt-20 mb-10 w-full max-w-5xl mx-auto">
       <h2 className="text-center tracking-wider mt-8 mb-2 mx-5 font-bold text-3xl text-dark-gray">
         RESUME
       </h2>

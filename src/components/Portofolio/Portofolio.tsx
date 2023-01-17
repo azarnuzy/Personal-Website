@@ -138,7 +138,7 @@ const Portofolio = () => {
     }
   };
   return (
-    <div className="mt-20 mb-10 w-full">
+    <div className="mt-20 mb-10 w-full max-w-5xl mx-auto">
       <h2 className="text-center tracking-wide mt-8 mb-2 mx-5 font-medium text-4xl text-dark-gray">
         PORTOFOLIO
       </h2>
@@ -148,13 +148,13 @@ const Portofolio = () => {
             <div
               className={`mx-5 flex ${
                 i % 2 == 1 ? 'sm:flex-row-reverse' : 'sm:flex-row'
-              } flex-col`}
+              } flex-col sm:gap-8`}
               key={i}
             >
               <a
                 href={item.url}
                 target="_blank"
-                className="w-full  border-2 border-solid border-dark-gray shadow-sm hover:border-b-4 hover:border-r-4 transition ease-in-out duration-300 h-[220px] mb-5 overflow-hidden"
+                className="w-full md:w-3/4  border-2 border-solid border-dark-gray shadow-sm hover:border-b-4 hover:border-r-4 transition ease-in-out duration-300 h-[220px] mb-5 overflow-hidden"
               >
                 {imageProject(item.image)}
               </a>
